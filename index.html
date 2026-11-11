@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="stylesheet" href="style.css">
+<title>Mano PDF</title>
+</head>
+<body>
+<div id="app">
+
+<header class="top">
+  <button id="bMenu" class="ib" aria-label="Meniu"></button>
+  <div class="title">Mano PDF</div>
+  <button id="bNew" class="ib" aria-label="Naujas PDF"></button>
+  <button id="bOpen" class="ib" aria-label="Atidaryti PDF"></button>
+  <button id="bAI" class="ib" aria-label="AI asistentas"></button>
+</header>
+
+<div id="main" class="main">
+  <div id="empty" class="empty">
+    <div id="emptyLogo" class="logo"></div>
+    <h1>Mano PDF</h1>
+    <p>Kurkite, redaguokite ir dalinkitės PDF failais su AI pagalba</p>
+    <div class="ecards">
+      <button class="ecard" id="eNew">
+        <span id="eNewIc" class="ic"></span>
+        <b>Naujas PDF</b>
+        <small>Sukurkite naują dokumentą arba prezentaciją</small>
+      </button>
+      <button class="ecard" id="eOpen">
+        <span id="eOpenIc" class="ic"></span>
+        <b>Atidaryti PDF</b>
+        <small>Atidarykite PDF iš telefono ir redaguokite</small>
+      </button>
+      <button class="ecard" id="eTemplate">
+        <span id="eTplIc" class="ic"></span>
+        <b>Iš šablono</b>
+        <small>Prezentacija, brošiūra, CV, vizitinė kortelė</small>
+      </button>
+    </div>
+  </div>
+  <div id="viewer" class="viewer" hidden>
+    <div id="toolbar" class="toolbar">
+      <div class="tl">
+        <button id="tClose" class="ib" aria-label="Uždaryti"></button>
+        <span id="docTitle" class="doctitle"></span>
+      </div>
+      <div class="tr">
+        <button id="tUndo" class="ib" aria-label="Atšaukti"></button>
+        <button id="tRedo" class="ib" aria-label="Pakartoti"></button>
+        <button id="tShare" class="ib" aria-label="Bendrinti"></button>
+        <button id="tSave" class="ib" aria-label="Išsaugoti"></button>
+      </div>
+    </div>
+    <div id="pages" class="pages"></div>
+    <div id="editBar" class="editbar" hidden>
+      <button class="etool" id="eTxt" aria-label="Tekstas"></button>
+      <button class="etool" id="eImg" aria-label="Nuotrauka"></button>
+      <button class="etool" id="eDraw" aria-label="Piešti"></button>
+      <button class="etool" id="eHL" aria-label="Pažymėti"></button>
+      <button class="etool" id="eDel" aria-label="Ištrinti puslapį"></button>
+      <button class="etool" id="eAddPg" aria-label="Pridėti puslapį"></button>
+    </div>
+  </div>
+</div>
+
+<div id="aiPanel" class="aipanel" hidden>
+  <div class="aihead">
+    <span class="aititle">AI asistentas</span>
+    <button id="aiClose" class="ib" aria-label="Uždaryti AI"></button>
+  </div>
+  <div id="aiMsgs" class="aimsgs"></div>
+  <div class="aifoot">
+    <div class="aibox">
+      <textarea id="aiInput" rows="1" placeholder="Klauskite apie PDF..."></textarea>
+      <button id="aiMic" class="ib" aria-label="Mikrofonas"></button>
+      <button id="aiSend" class="go" aria-label="Siųsti"></button>
+    </div>
+  </div>
+</div>
+
+<div id="scrim" class="scrim" hidden></div>
+<aside id="drawer" class="drawer"></aside>
+<div id="sheet" class="sheet" hidden></div>
+<div id="toast" class="toast"></div>
+
+<input type="file" id="fPDF" accept="application/pdf" hidden>
+<input type="file" id="fImg2" accept="image/*" hidden>
+</div>
+<script src="app.js"></script>
+<script src="pdf-core.js"></script>
+</body>
+</html>
