@@ -1,0 +1,17 @@
+{
+  "name": "Mano PDF",
+  "short_name": "Mano PDF",
+  "description": "PDF kūrimas, redagavimas ir prezentacijos su AI",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#0866ff",
+  "lang": "lt",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
