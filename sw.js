@@ -1,4 +1,5 @@
 const C='pdf-v1';
+const FILES=['./','index.html','style.css','manifest.json','icon-512.png','app.js','pdf-core.js','ai-editor.js','pdf-preview.js','pdf-present.js','pdf-final.js'];
 const CDN=['cdnjs.cloudflare.com','cdn.jsdelivr.net','unpkg.com'];
 self.addEventListener('install',e=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
