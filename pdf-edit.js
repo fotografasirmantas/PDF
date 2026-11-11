@@ -106,3 +106,4 @@ $('fPDF').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)r
 
 /* ===== Piešimas ant drobės ===== */
 function wrapText(x,t,
+/* ===== pdf-edit.js pabaiga ===== */
